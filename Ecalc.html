@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Calculator</title>
+<meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<link href="assets/css/style.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #ecf0f1;
+        font-family: Arial, sans-serif;
+    }
+    .container1 {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    /* .container .country{
+        color: #3498db;
+    } */
+    h2 {
+        /* color: #3498db; */
+        text-align: center;
+    }
+    label {
+        font-weight: bold;
+    } 
+    select, input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+    
+    
+</style>
+
+</head>
+<body background="assets/img/calcbg/IMG-20240413-WA0004.jpg">
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">EduRoute</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="FAQs/FAQs(INDIA).html">FAQs</a></li>
+          <li class="dropdown"><a><span>Exam Resources</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="ER/EXAM RESOURCES F.html">Foreign Countries</a></li>
+              <li><a href="ER/EXAM RESOURCES INDIA.html">INDIA</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a><span>Countries</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="inner India.html">INDIA</a></li>
+              <li><a href="inner USA.html">USA</a></li>
+              <li><a href="inner Australia.html">Australia</a></li>
+              <li><a href="inner Canada.html">Canada</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>C&E Calc</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Currency calc.html">Currency Calculator</a></li>
+              <li><a class="nav-link scrollto active">Expense Calculator</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="signin.html">Sign In</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Calculators</h2>
+        <ol>
+          <li><a>Expense Calculator</a></li>
+          <li><a href="Currency calc.html">Currency Calculator</a></li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- <div class="section-title" data-aos="fade-up">
+		<h3 style="color: transparent;">SIGN IN</h3>
+		 <h3 style="color: transparent;">SIGN IN</h3> 
+	</div>-->
+
+  <div class="container1">
+  
+    <h2>Expense Calculator</h2>
+    <label for="country" style="color: #3498db">Select the country:</label>
+    <select id="country">
+        <option value="australia">Australia</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+    </select>
+    <label for="course" style="color: #3498db">Which course you want to pursue abroad?</label>
+    <select id="course">
+        <option value="ms">MS</option>
+        <option value="mba">MBA</option>
+        <option value="pg-diploma">PG-DIPLOMA</option>
+    </select>
+    <label for="accommodation" style="color: #3498db">Select your preferred Accommodation type:</label>
+    <select id="accommodation">
+        <option value="on-campus">On-campus</option>
+        <option value="off-campus">Off-campus</option>
+    </select>
+    <label for="food" style="color: #3498db">How will you manage your food?</label>
+    <select id="food">
+        <option value="hostel-food">Hostel food</option>
+        <option value="outside-food">Outside food</option>
+        <option value="cook-self">Cook self</option>
+    </select>
+    <label for="transport" style="color: #3498db">Select your preferred mode of transport:</label>
+    <select id="transport">
+        <option value="own-vehicle">Own vehicle</option>
+        <option value="public-transport">Public transport</option>
+    </select>
+    <label for="other-expenses" style="color: #3498db">Other Expenses:</label>
+    <input type="number" id="other-expenses" placeholder="Enter amount">
+    <button onclick="calculateExpenses()">Calculate Expenses</button>
+    <div id="total-expenses"></div>
+</div>
+
+<script>
+    function calculateExpenses() {
+        var country = document.getElementById('country').value;
+        var course = document.getElementById('course').value;
+        var accommodation = document.getElementById('accommodation').value;
+        var food = document.getElementById('food').value;
+        var transport = document.getElementById('transport').value;
+        var otherExpenses = parseFloat(document.getElementById('other-expenses').value) || 0;
+
+        var countryPrices = {
+            australia: {
+                ms: 30000,
+                mba: 40000,
+                'pg-diploma': 25000,
+                'on-campus': 15600,
+                'off-campus': 20800,
+                'hostel-food': 10000,
+                'outside-food': 8000,
+                'cook-self': 7000,
+                'own-vehicle': 7000,
+                'public-transport': 4000
+
+            },
+            usa: {
+              ms: 40000,
+                mba: 100000,
+                'pg-diploma': 8000,
+                'on-campus': 11000,
+                'off-campus': 50000,
+                'hostel-food': 6000,
+                'outside-food': 26000,
+                'cook-self': 20800,
+                'own-vehicle':20800,
+                'public-transport': 10000
+
+            },
+            canada: {
+              ms: 32000,
+                mba: 50000,
+                'pg-diploma': 27000,
+                'on-campus': 40000,
+                'off-campus': 40000,
+                'hostel-food': 6000,
+                'outside-food': 5200,
+                'cook-self': 4000,
+                'own-vehicle': 5200,
+                'public-transport': 3000
+
+            },
+            india: {
+              ms: 25000,
+                mba: 35000,
+                'pg-diploma': 20000,
+                'on-campus':100000,
+                'off-campus': 70000,
+                'hostel-food':200000,
+               'outside-food':105000,
+                'cook-self':300000,
+                'own-vehicle':350000,
+                'public-transport': 150000
+
+            }
+        };
+        {
+        var totalExpenses = countryPrices[country][course] + countryPrices[country][accommodation] + countryPrices[country][food] + countryPrices[country][transport] + otherExpenses;
+        // totalExpenses.setAttribute("style", "color: blue, margin-top:5px");
+        //  document.body.appendChild(totalExpenses);
+        document.getElementById('total-expenses').innerHTML = 'Total Expenses: $' + totalExpenses.toFixed(2);
+        }
+    }
+</script>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>EduRoute</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#services" class="scrollto">Services</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
